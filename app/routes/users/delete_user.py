@@ -1,4 +1,5 @@
 from fastapi import APIRouter, HTTPException
+
 from app.utils.db import get_database
 
 delete_user_router = APIRouter()
@@ -12,3 +13,4 @@ async def delete_user(user_id:str):
     if user:
         await db.users.delete_one({"_id": user_id})
         raise HTTPException(status_code=200, detail="Usuarios eliminado correctamente")
+    

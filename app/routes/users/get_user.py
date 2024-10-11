@@ -1,4 +1,5 @@
 from fastapi import APIRouter, HTTPException
+
 from app.utils.db import get_database
 
 get_user_router = APIRouter()

@@ -1,4 +1,5 @@
 from fastapi import APIRouter
+
 from app.utils.db import get_database
 
 list_user_router = APIRouter()

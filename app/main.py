@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+
 from app.utils.db import connect_db
 
 from app.routes.users.create_user import create_user_router
@@ -20,4 +21,3 @@ app.include_router(list_user_router)
 app.include_router(get_user_router)
 app.include_router(update_user_router)
 app.include_router(delete_user_router)
-

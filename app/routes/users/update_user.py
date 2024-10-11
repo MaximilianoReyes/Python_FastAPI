@@ -1,5 +1,7 @@
 from fastapi import APIRouter, HTTPException
+
 from app.models.model_update_user import UpdateUserModel
+
 from app.utils.db import get_database
 from app.utils.security import hash_password
 
@@ -38,3 +40,4 @@ async def update_user(user_id: str, user: UpdateUserModel):
         raise HTTPException(status_code=500, detail="La actualización fallo")
     else:
         raise HTTPException(status_code=200, detail="Usuario actualizado correctamente")
+    

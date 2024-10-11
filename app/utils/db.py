@@ -16,4 +16,3 @@ async def get_database():
     if client is None:
         raise RuntimeError("Base de datos no conectada...")
     return client.python_fastapi
-

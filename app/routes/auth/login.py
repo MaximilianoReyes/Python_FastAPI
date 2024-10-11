@@ -1,6 +1,8 @@
 from fastapi import APIRouter, HTTPException
-from app.utils.db import get_database
+
 from app.models.model_login import LoginModel
+
+from app.utils.db import get_database
 from app.utils.security import verify_password
 from app.utils.jwt import generate_jwt
 
@@ -22,4 +24,3 @@ async def login(user: LoginModel):
     
     return {"status": 200, "token": token}
         
-    

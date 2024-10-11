@@ -1,6 +1,8 @@
 from bson import ObjectId
 from fastapi import APIRouter, HTTPException
+
 from app.models.model_user import UserModel
+
 from app.utils.db import get_database
 from app.utils.security import hash_password
 
@@ -25,4 +27,3 @@ async def register_user(user: UserModel):
         await db.users.insert_one(user_data)
         raise HTTPException(status_code=200, detail="Usuario creado exitosamente")
         
-    
